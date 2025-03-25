@@ -1,0 +1,78 @@
+<app-header></app-header>
+<main class="account">
+    <div class="container">
+        <div class="mt-5 mb-5 d-flex justify-content-between">
+            <div>
+                <a class="text-muted btn" routerLink="/home" routerLinkActive="active">Home</a> / 
+                <a class=" btn" routerLink="/account" routerLinkActive="active">My Account</a>
+            </div>
+            <div>
+                <span>Welcome! </span> <span class="text text-danger">{{getDataUser.name}}</span>
+            </div>
+        </div>
+        <div class="row mt-5 mb-5">
+            <div class="col-md-4">
+                <h5 class="mt-2">Manage My Account</h5>
+                <div>                    <a routerLink="/account" routerLinkActive="active" class="btn text text-danger border-0">My Profile</a>
+                </div>
+                <div>                    <a routerLink="/address" routerLinkActive="active" class="btn  border-0">Address Book</a>
+                </div>
+                <div>                    <a routerLink="/payment" routerLinkActive="active" class="btn  border-0">My Payment Options</a>
+                </div>
+                <h5 class="mt-2">My Orders</h5>
+                <div>                    <a routerLink="/my-returns" routerLinkActive="active" class="btn  border-0">My Returns</a>
+                </div>
+                <div>                    <a routerLink="/my-cancellations" routerLinkActive="active" class="btn  border-0">My Cancellations</a>
+                </div>
+                  <h5 class="mt-2" routerLink="/wishlist" routerLinkActive="active" > My WishList</h5>
+            </div>
+            <div class="col-md-8">
+                <div class="card border-0">
+                    <div class="card-body">
+                      <h5 class="card-title text text-danger">Edit Your Profile</h5>
+                      <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">First Name</label>
+                                <input type="text" [(ngModel)]="getDataUser.name" name="name" class="form-control" id="name" placeholder="Md">
+                              </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="lname" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="lname" placeholder="Rimel">
+                              </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="text" [(ngModel)]="getDataUser.email" name="email" class="form-control" id="email" placeholder="rimel1111@gmail.com">
+                              </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label for="address" class="form-label">Address</label>
+                                <input type="text" [(ngModel)]="getDataUser.city" class="form-control" id="address" placeholder="Kingston, 5236, United State">
+                              </div>
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <label for="password" class="form-label">Password Changes</label>
+                        <input type="password" [(ngModel)]="getDataUser.password" class="form-control" id="password" placeholder="Current Passwod">
+                        <input type="password" class="form-control mt-2" id="newpassword" placeholder="New Passwod">
+                        <input type="password" class="form-control mt-2" id="confirmnewpassword" placeholder="Confirm New Passwod">
+                      </div>
+                      <div class="float-end">
+                        <button class="btn"> Cancel</button>
+                        <button class="btn btn-danger"> Save Changes</button>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+<app-footer></app-footer>

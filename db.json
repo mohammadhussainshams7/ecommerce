@@ -1,0 +1,242 @@
+{
+  "users": [
+    {
+      "id": "ca3b",
+      "name": "mohamed",
+      "email": "mohamed@gmail.com",
+      "password": "1234",
+      "fname": "ahmed",
+      "companyName": "test",
+      "street": "25 arab sina",
+      "apartment": "2 floor",
+      "city": "cairo",
+      "phone": "015645649865",
+      "saveInformation": false
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "imageSrc": "assets/images/1.png",
+      "discountPercent": "-40%",
+      "name": "HAVIT HV-G92 Gamepad",
+      "PriceAfterDiscount": "120",
+      "img1": "assets/images/1.png",
+      "img2":"assets/images/35.jpg",
+      "img3":"assets/images/36.jpg",
+      "img4":"assets/images/37.jpg",
+      "RealPrice": "160",
+      "StartCount": "5",
+      "description":"Reliable 3D ergonomic design with built-in motors for dual vibration Unique and delicate design 8 direction buttons, 12 action buttons and 2 analog sticks Turbo and clear special function"
+    },
+    {
+      "id": "2",
+      "imageSrc": "assets/images/2.png",
+      "discountPercent": "-35%",
+      "name": "Ak-900 Wired Keyboard",
+      "PriceAfterDiscount": "960",
+      "RealPrice": "1160",
+      "StartCount": "4",
+      "img1": "assets/images/2.png",
+      "img2":"assets/images/38.jpg",
+      "img3":"assets/images/39.jpg",
+      "img4":"assets/images/40.jpg"
+      ,"description":"iMICE AK-900 Gaming Keyboard comes with USB Wired. Its cable length is 135cm. This is one kind of Luminescent Gaming Keyboard. This iMICE AK-900 has 104 keys, 100mA with DC 5V voltage. It is one of the perfect choices for gaming at a reasonable price. This gaming keyboard featured with RGB luminous lighting effect one click turn on/ off. This is a Waterproof Gaming Keyboard. This iMICE AK-900 gaming keyboard will provide you with High-performance when you are playing. This new iMICE AK-900 is compatible with Windows xp/ Vista/ Win7/ 8/ 10 operating system. The latest iMICE AK-900 Gaming Keyboard offers 01-year warranty."
+    },
+    {
+      "id": "3",
+      "imageSrc": "assets/images/3.png",
+      "discountPercent": "-30%",
+      "name": "Ips LCD Gaming Monitor",
+      "PriceAfterDiscount": "370",
+      "RealPrice": "400",
+      "StartCount": "5",
+      "img1": "assets/images/3.png",
+      "img2":"assets/images/41.jpg",
+      "img3":"assets/images/42.jpg",
+      "img4":"assets/images/43.jpg"
+      ,"description":"LED monitor with IPS panel and borderless design Minimalist design, maximum concentration IPS panel preserves color vividness and clarity across every inch of the screen Seamless dual monitor setup with the borderless design Uninterrupted game and movie scenes with FreeSync"
+    },
+    {
+      "id": "4",
+      "imageSrc": "assets/images/4.png",
+      "discountPercent": "-25%",
+      "name": "S-Series Comfort Chair",
+      "PriceAfterDiscount": "375",
+      "RealPrice": "400",
+      "StartCount": "5",
+      "img1": "assets/images/4.png",
+      "img2":"assets/images/44.jpg",
+      "img3":"assets/images/45.jpg",
+      "img4":"assets/images/46.jpg"
+      ,"description":"The S Series chair combines ergonomic adjustments with a sleek design from Denmark. The armrests, seat height, seat depth, and tilt help you maintain optimal posture, and the high-density internet back provides warmth so you can focus on the tasks at hand. And while the minimalist look creates a visually timeless image, the bright color of the cushion adds a touch of character to the chair itself without being too boring."
+    }
+  ],
+  "bestSellingProducts": [
+    {
+      "id": "5",
+      "imageSrc": "assets/images/5.png",
+      "name": "The north coat",
+      "PriceAfterDiscount": "260",
+      "RealPrice": "360",
+      "StartCount": "5",
+      "img1": "assets/images/5.png",
+      "img2":"assets/images/47.jpg",
+      "img3":"assets/images/48.jpg",
+      "img4":"assets/images/49.webp",
+      "description":"display attribute: apparel display on website material composition: 100% polyester Item Category: outerwear"
+    },
+    {
+      "id": "6",
+      "imageSrc": "assets/images/6.png",
+      "name": "Gucci duffle bag",
+      "PriceAfterDiscount": "960",
+      "RealPrice": "1160",
+      "StartCount": "4",
+      "img1": "assets/images/6.png",
+      "img2":"assets/images/50.webp",
+      "img3":"assets/images/51.jpg",
+      "img4":"assets/images/52.jpg",
+      "description":"Explore Lyst's curated selection of Gucci duffle and gym bags, where practicality meets the pinnacle of Italian craftsmanship. Each piece marries functionality with iconic GG monogramming, robust leathers, and Gucci's rich tapestry of design. From the understated elegance of a black Gucci duffle bag to the statement-making Savoy patterns, these bags are engineered to accommodate the lifestyle of the discerning individual. Delve into options that transcend time—sophisticated, versatile companions that uphold the legacy within every stitch."
+    },
+    {
+      "id": "7",
+      "imageSrc": "assets/images/7.png",
+      "name": "RGB liquid CPU Cooler",
+      "PriceAfterDiscount": "160",
+      "RealPrice": "170",
+      "StartCount": "4",
+      "img1": "assets/images/7.png",
+      "img2":"assets/images/53.jpg",
+      "img3":"assets/images/54.jpg",
+      "img4":"assets/images/55.jpg",
+      "description":"COOL CPU, COOLER LIGHTING All-in-one CPU cooling that illuminates your PC with dramatic color, thanks to 120mm CORSAIR SP RGB ELITE PWM fans generating great airflow and vibrant RGB lighting. Conveniently control your lighting through compatible motherboards. CORSAIR iCUE software lets you control and synchronize RGB lighting with select iCUE-compatible devices (requires a CORSAIR iCUE COMMANDER CORE XT or iCUE Lighting Node CORE, sold separately) HIGH-PERFORMANCE COLD PLATE AND PUMP Equipped with a thermally optimized copper cold plate and low-noise pump design for quiet cooling."
+    },
+    {
+      "id": "8",
+      "imageSrc": "assets/images/8.png",
+      "name": "Small BookSelf",
+      "PriceAfterDiscount": "360",
+      "RealPrice": "",
+      "StartCount": "5",
+      "img1": "assets/images/8.png",
+      "img2":"assets/images/56.jpg",
+      "img3":"assets/images/57.jpg",
+      "img4":"assets/images/58.jpg",
+      "description":"Vida Designs Cambridge 3 Tier Low Bookcase, Oak Wooden Shelving Display Storage Unit Office Living Room Furniture"
+    }
+  ],
+  "ourProducts": [
+    {
+      "id": "9",
+      "imageSrc": "assets/images/10.jpg",
+      "name": "Breed Dry Dog Food",
+      "PriceAfterDiscount": "100",
+      "RealPrice": "",
+      "StartCount": "3",
+      "discountPercent": "",
+      "img1": "assets/images/10.jpg",
+      "img2":"assets/images/59.jpg",
+      "img3":"assets/images/60.jpg",
+      "img4":"assets/images/61.jpg",
+      "description":"Our carefully crafted dog food recipes are full of delicious ingredients for complete and balanced nutrition that will help keep your pet healthy and happy. Discover our nutritious dog meals today!"
+    },
+    {
+      "id": "10",
+      "imageSrc": "assets/images/11.png",
+      "name": "CANON EOS DSLR Camera",
+      "PriceAfterDiscount": "360",
+      "RealPrice": "",
+      "StartCount": "4",
+      "discountPercent": "",
+      "img1": "assets/images/11.png",
+      "img2":"assets/images/62.jpg",
+      "img3":"assets/images/63.jpg",
+      "img4":"assets/images/64.jpg",
+      "description":"Canon EOS 2000D DSLR camera with EFS with 18-55mm III lens kit"
+    },
+    {
+      "id": "11",
+      "imageSrc": "assets/images/12.png",
+      "name": "ASUS FHD Gaming Laptop",
+      "PriceAfterDiscount": "700",
+      "RealPrice": "",
+      "StartCount": "5",
+      "discountPercent": "",
+      "img1": "assets/images/12.png",
+      "img2":"assets/images/65.jpg",
+      "img3":"assets/images/66.jpg",
+      "img4":"assets/images/67.jpg",
+      "description":"AMD Ryzen 7 7435HS, up to 4.5 GHz, 8 cores 8GB DDR5-5600 SO-DIMM RAM 512GB PCIe 4.0 NVMe M.2 SSD NVIDIA GeForce RTX 2050 Laptop GPU, 4GB GDDR6 15.6-inch FHD (1920 x 1080), 144Hz Refresh Rate"
+    },
+    {
+      "id": "12",
+      "imageSrc": "assets/images/13.png",
+      "name": "Curology Product Set ",
+      "PriceAfterDiscount": "500",
+      "RealPrice": "",
+      "StartCount": "4",
+      "discountPercent": "",
+      "img1": "assets/images/13.png",
+      "img2":"assets/images/68.webp",
+      "img3":"assets/images/69.jpg",
+      "img4":"assets/images/70.jpg",
+      "description":"SOME BY MI AHA BHA PHA 30 Days Miracle Starter Kit Edition"
+    },
+    {
+      "id": "13",
+      "imageSrc": "assets/images/14.png",
+      "name": "Kids Electric Car ",
+      "PriceAfterDiscount": "960",
+      "RealPrice": "",
+      "StartCount": "5",
+      "discountPercent": "New",
+      "img1": "assets/images/14.png",
+      "img2":"assets/images/71.jpg",
+      "img3":"assets/images/72.jpg",
+      "img4":"assets/images/73.jpg",
+      "description":"Dream Land Cobra Electric Ride on Car for Kids - Red - HF-901 Easy to use It provides endless hours of fun and entertainment Perfect for developing kid's imagination and manual dexterity It is good to improve imagination and creativity"
+    },
+    {
+      "id": "14",
+      "imageSrc": "assets/images/15.png",
+      "name": "Jr. Zoom Soccer Cleats ",
+      "PriceAfterDiscount": "1160",
+      "RealPrice": "",
+      "StartCount": "5",
+      "discountPercent": "",
+      "img1": "assets/images/15.png",
+      "img2":"assets/images/74.webp",
+      "img3":"assets/images/75.jpg",
+      "img4":"assets/images/76.jpg",
+      "description":"Firm ground outsole Textile lining Multilayer textile upper Lace closure Regular fit"
+    },
+    {
+      "id": "15",
+      "imageSrc": "assets/images/16.png",
+      "name": "GP11 Shooter USB Gamepad ",
+      "PriceAfterDiscount": "660",
+      "RealPrice": "",
+      "StartCount": "4",
+      "discountPercent": "New",
+      "img1": "assets/images/16.png",
+      "img2":"assets/images/77.jpg",
+      "img3":"assets/images/78.jpg",
+      "img4":"assets/images/79.jpg",
+      "description":"12 Month warranty USB Wired connection Dual Vibration function Plug & Play no software needed Support PC & PS3 & Xbox 360 Content BY NEXTmart"
+    },
+    {
+      "id": "16",
+      "imageSrc": "assets/images/17.png",
+      "name": "Quilted Satin Jacket ",
+      "PriceAfterDiscount": "665",
+      "RealPrice": "",
+      "StartCount": "4",
+      "img1": "assets/images/17.png",
+      "img2":"assets/images/80.jpg",
+      "img3":"assets/images/81.jpg",
+      "img4":"assets/images/82.jpg",
+      "description":"WaterProof jacket design high quality materials and fur lining for winter"
+    }
+  ]
+}

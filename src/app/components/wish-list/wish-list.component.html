@@ -1,0 +1,161 @@
+<app-header></app-header>
+
+<section class="wish-list">
+  
+<div class="container">
+  <div class="d-flex justify-content-between mt-4">
+      <div class="fs-4">Wishlist ({{wishList.length}})</div>
+      <button class="btn btn-outline-dark" >Move All To Bag</button>
+  </div>
+<div *ngIf="wishList.length > 0">
+ 
+  <div class="row carousel ">
+      @for (product of wishList; track $index) {
+      <div class="card col-md-6 col-lg-4 col-xl-3  border-0">
+        <div class=" top-card">
+          <div class="d-flex justify-content-between p-2">
+            <div class="discount-percent">
+              {{ product.discountPercent }}
+            </div>
+            <div class="fill-Heart">
+              <button (click)="removeFromWishList(product)" class="btn">  
+                  <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="17" cy="17" r="17" fill="white"/>
+                      <path d="M25 10.5714H10.3333L11.6667 26H22.3333L23.6667 10.5714H9M17 14.4286V22.1429M20.3333 14.4286L19.6667 22.1429M13.6667 14.4286L14.3333 22.1429M14.3333 10.5714L15 8H19L19.6667 10.5714" stroke="black" stroke-width="1.56" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      
+  
+                </button>                   
+            </div>
+          </div>
+          <div class="d-flex justify-content-center align-items-center">
+            <div class="col-md-10">
+              <img
+                src="{{ product.imageSrc }}"
+                class="card-img-top"
+                draggable="false"
+                alt="{{ product.name }}"
+              />
+            </div>
+         
+          </div>
+        </div> 
+        <button 
+        data-bs-toggle="modal" data-bs-target="#wishList"
+        class="btn btn-dark" (click)="addSampleItems(product.id , product.name,product.PriceAfterDiscount,1,product.imageSrc)"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8.75 20.25C9.16421 20.25 9.5 19.9142 9.5 19.5C9.5 19.0858 9.16421 18.75 8.75 18.75C8.33579 18.75 8 19.0858 8 19.5C8 19.9142 8.33579 20.25 8.75 20.25Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M19.25 20.25C19.6642 20.25 20 19.9142 20 19.5C20 19.0858 19.6642 18.75 19.25 18.75C18.8358 18.75 18.5 19.0858 18.5 19.5C18.5 19.9142 18.8358 20.25 19.25 20.25Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M2.75 3.75H5.75L8 16.5H20" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M8 12.5H19.6925C19.7792 12.5001 19.8633 12.4701 19.9304 12.4151C19.9975 12.3601 20.0434 12.2836 20.0605 12.1986L21.4105 5.44859C21.4214 5.39417 21.42 5.338 21.4066 5.28414C21.3931 5.23029 21.3679 5.18009 21.3327 5.13717C21.2975 5.09426 21.2532 5.05969 21.203 5.03597C21.1528 5.01225 21.098 4.99996 21.0425 5H6.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+
+          Add To Cart</button>
+
+        <div class="card-body">
+          <h5 class="card-title">{{ product.name }}</h5>
+          <span class="card-text text-danger p-2">{{
+            product.PriceAfterDiscount
+          }} $</span>
+          <span class="card-text p-2 text-secondary">{{
+            product.RealPrice
+          }} $</span>
+          <div class="star">
+            @if(product.StartCount == 4){
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            } @else{
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+
+            }
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+
+
+  </div>
+    
+<div  *ngIf="wishList.length === 0">
+<h2 class="m-5"><i class="fas fa-heart-broken"></i> Your wishList is empty.</h2>
+</div>
+
+</div>
+
+<div class="container">
+  <div class="d-flex justify-content-between mt-4">
+    <div class="fs-4">
+      <div class="header"></div>
+      <span>Just For You</span>
+    </div>
+    <button class="btn btn-outline-dark">See All</button>
+    </div>
+    <div class="row custom-md">
+      @for (product of products; track $index) {
+      <div class="card col-md-6 col-lg-4 col-xl-3 border-0">
+        <div class="top-card">
+          <div class="d-flex justify-content-between p-2">
+            <div></div>
+            <div class="col-md-2 eye">
+              <a routerLink="details" [routerLink]="['/details',product.id]" routerLinkActive="router-link-active" > <i class="fa-regular fa-eye"></i></a>
+             </div>
+          </div>
+          <div class="d-flex justify-content-center align-items-center">
+            <div class="col-md-11">
+              <img
+                src="{{ product.imageSrc }}"
+               
+                class="card-img-top"
+                alt="{{ product.name }}"
+              />
+            </div>
+           
+          </div>
+        </div>
+        
+        <button class="btn btn-dark" 
+        data-bs-toggle="modal" data-bs-target="#exampleModal"
+          (click)="addSampleItems(product.id , product.name,product.PriceAfterDiscount,1,product.imageSrc)">
+          Add To Cart
+      </button>
+
+        <div class="card-body">
+          <h5 class="card-title">{{ product.name }}</h5>
+          <span class="card-text text-danger p-2">{{
+            product.PriceAfterDiscount
+          }} $</span>
+          <span class="card-text p-2 text-secondary">{{
+            product.RealPrice 
+          }} $</span>
+          <div class="star">
+            @if(product.StartCount == 4){
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-regular fa-star"></i>
+            } @else{
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+
+            }
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+
+</section>
+  <app-modal></app-modal>
+<app-footer></app-footer>

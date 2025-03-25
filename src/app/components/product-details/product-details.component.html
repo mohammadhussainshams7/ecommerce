@@ -1,0 +1,228 @@
+<app-header></app-header>
+<main class="product-ditails">
+    
+    <div class="mt-5 mb-5 container">
+        <a class="text-muted btn" routerLink="/account" routerLinkActive="active">Account</a> /
+        <a class="text-muted btn" routerLink="/gaming" routerLinkActive="active">Gaming</a>/
+         <a class=" btn border-0" routerLink="/details/{{detailsTheProduct.id}}" routerLinkActive="active">details {{detailsTheProduct.name}}</a>
+      </div>
+
+
+
+
+
+      
+<section class="mb-5 mt-5">
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2  changePicture">
+                      
+                          <img [src]="detailsTheProduct?.img1"  (click)="changePicture($event)" alt=""  width="150" class="img-fluid p-1 mt-1">
+                  
+                    
+                        <img [src]="detailsTheProduct?.img2"  (click)="changePicture($event)" alt=""  width="150" class="img-fluid p-1 mt-1">
+                    
+                    
+                        <img [src]="detailsTheProduct?.img3"  (click)="changePicture($event)" alt=""  width="150" class="img-fluid p-1 mt-1">
+                     
+                    
+                        <img [src]="detailsTheProduct?.img4" (click)="changePicture($event)" alt=""  width="150" class="img-fluid p-1 mt-1">
+                    
+            </div>
+            <div class="col-md-6 mainPicture">
+                <img  [src]="imgSrc" class="img-fluid ">
+            </div>
+            <div class="col-md-4">
+                <h4>{{detailsTheProduct.name}}</h4>
+                <div>
+                        <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <span class="text-muted"> (150 Reviews) </span>
+                    <span>|</span>
+                    <span class="text-success"> In Stock</span>
+                </div>
+                <h5 class="mt-3 mb-3">{{detailsTheProduct.PriceAfterDiscount}}</h5>
+                <p>{{detailsTheProduct.description}}</p>
+                <hr>
+                <div class="d-flex">
+                    <span>Colours: </span>
+                    <span>
+                        <svg width="250" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="117" cy="10" r="6" fill="#A0BCE0"/>
+                            <circle cx="117" cy="10" r="9" stroke="black" stroke-width="2"/>
+                            <circle cx="145" cy="10" r="10" fill="#E07575"/>
+                        </svg>
+                            
+                    </span>
+                    
+                </div>
+                <div class="mt-2">
+                    <span>Size: </span>
+                    <button class="btn btn-outline-dark">XS</button>
+                    <button class="btn  m-1  btn-outline-dark">S</button>
+                    <button class="btn m-1   btn-danger">M</button>
+                    <button class="btn m-1   btn-outline-dark">L</button>
+                    <button class="btn  m-1  btn-outline-dark">XL</button>
+
+                </div>
+                <div class="row mt-3 mb-3">
+                    <div class="col-6 ">
+
+                        <div class="input-group mb-3">
+                            <button class="input-group-text btn btn-outline-dark" (click)="subtract()">-</button>
+                            <input type="number" class="form-control"   min="1" [(ngModel)]="productMount">
+                            <span class="input-group-text btn btn-danger" (click)="plural()">+</span>
+
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <button class="btn btn-danger">Buy Now</button>
+                    </div>
+                    <div class="col-1 ">
+                        <button class="btn btn-outline-danger">
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                  <div class="container  mt-4 mb-3">
+                    <div class="d-flex justify-content-evenly align-items-center">
+                      <div>
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_261_4843)">
+                          <path d="M11.6673 31.6667C13.5083 31.6667 15.0007 30.1743 15.0007 28.3333C15.0007 26.4924 13.5083 25 11.6673 25C9.82637 25 8.33398 26.4924 8.33398 28.3333C8.33398 30.1743 9.82637 31.6667 11.6673 31.6667Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M28.3333 31.6667C30.1743 31.6667 31.6667 30.1743 31.6667 28.3333C31.6667 26.4924 30.1743 25 28.3333 25C26.4924 25 25 26.4924 25 28.3333C25 30.1743 26.4924 31.6667 28.3333 31.6667Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M8.33398 28.3335H7.00065C5.89608 28.3335 5.00065 27.4381 5.00065 26.3335V21.6668M3.33398 8.3335H19.6673C20.7719 8.3335 21.6673 9.22893 21.6673 10.3335V28.3335M15.0007 28.3335H25.0007M31.6673 28.3335H33.0007C34.1052 28.3335 35.0007 27.4381 35.0007 26.3335V18.3335M35.0007 18.3335H21.6673M35.0007 18.3335L30.5833 10.9712C30.2218 10.3688 29.5708 10.0002 28.8683 10.0002H21.6673" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M8 28H6.66667C5.5621 28 4.66667 27.1046 4.66667 26V21.3333M3 8H19.3333C20.4379 8 21.3333 8.89543 21.3333 10V28M15 28H24.6667M32 28H32.6667C33.7712 28 34.6667 27.1046 34.6667 26V18M34.6667 18H21.3333M34.6667 18L30.2493 10.6377C29.8878 10.0353 29.2368 9.66667 28.5343 9.66667H21.3333" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M5 11.8182H11.6667" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M1.81836 15.4545H8.48503" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M5 19.0909H11.6667" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </g>
+                          <defs>
+                          <clipPath id="clip0_261_4843">
+                          <rect width="40" height="40" fill="white"/>
+                          </clipPath>
+                          </defs>
+                          </svg>
+                          
+                      </div>
+                      <div>
+                        <h5 class="mb-2">Free Delivery</h5>
+                        <p>Enter your postal code for Delivery Availability</p>
+                      </div>
+                    </div>
+                  </div>
+                  <hr />
+                  <div class="container mt-2 mb-3">
+                    <div class="d-flex justify-content-evenly align-items-center">
+                      <div>
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_261_4865)">
+                          <path d="M33.3327 18.3334C32.9251 15.4004 31.5645 12.6828 29.4604 10.5992C27.3564 8.51557 24.6256 7.18155 21.6888 6.80261C18.752 6.42366 15.7721 7.02082 13.208 8.5021C10.644 9.98337 8.6381 12.2666 7.49935 15M6.66602 8.33335V15H13.3327" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M6.66602 21.6667C7.07361 24.5997 8.43423 27.3173 10.5383 29.4009C12.6423 31.4845 15.3731 32.8185 18.3099 33.1974C21.2467 33.5764 24.2266 32.9792 26.7907 31.4979C29.3547 30.0167 31.3606 27.7335 32.4994 25M33.3327 31.6667V25H26.666" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </g>
+                          <defs>
+                          <clipPath id="clip0_261_4865">
+                          <rect width="40" height="40" fill="white"/>
+                          </clipPath>
+                          </defs>
+                          </svg>
+                          
+                          
+                      </div>
+                      <div>
+                        <h5 class="mb-2">Return Delivery</h5>
+                        <p>Free 30 Days Delivery Returns. Details</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+    
+</section>
+<section>
+    
+    <div class="container">
+        <div class="d-flex justify-content-between mt-4">
+          <div class="fs-4">
+            <div class="header"></div>
+            <span>Just For You</span>
+          </div>
+          <button class="btn btn-outline-dark">See All</button>
+          </div>
+          <div class="row custom-md">
+            @for (product of products; track $index) {
+            <div class="card col-md-6 col-lg-4 col-xl-3  border-0">
+              <div class="top-card">
+                <div class="d-flex justify-content-between p-2">
+                  <div></div>
+                  <div class="col-md-2 eye">
+                    <a [routerLink]="['/details',product.id]" routerLinkActive="router-link-active" > <i class="fa-regular fa-eye"></i></a>
+                   </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+                  <div class="col-md-11">
+                    <img
+                      src="{{ product.imageSrc }}"
+                     
+                      class="card-img-top"
+                      alt="{{ product.name }}"
+                    />
+                  </div>
+                 
+                </div>
+              </div>
+              
+              <button class="btn btn-dark" 
+              data-bs-toggle="modal" data-bs-target="#exampleModal"
+                (click)="addSampleItems(product.id , product.name,product.PriceAfterDiscount,1,product.imageSrc)">
+                Add To Cart
+            </button>
+      
+              <div class="card-body">
+                <h5 class="card-title">{{ product.name }}</h5>
+                <span class="card-text text-danger p-2">{{
+                  product.PriceAfterDiscount
+                }} $</span>
+                <span class="card-text p-2 text-secondary">{{
+                  product.RealPrice 
+                }} $</span>
+                <div class="star">
+                  @if(product.StartCount == 4){
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  } @else{
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+      
+                  }
+                </div>
+              </div>
+            </div>
+            }
+          </div>
+        </div>
+      
+  
+</section>
+</main>
+<app-modal></app-modal>
+<app-footer></app-footer>

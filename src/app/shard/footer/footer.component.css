@@ -1,0 +1,21 @@
+
+.links hr{
+    margin: 0 !important;
+    margin-bottom: 15px;
+}
+.links .input-group{
+    border: 2px solid #FFFFFF;
+}
+
+.footer{
+    margin-top: 1px;
+    padding: 5px;
+    border-top: 1px solid #ffffff00;
+    color: #FFFFFF;
+}
+.icons{
+    font-size: 40px;
+}
+.icons i:hover{
+    color: hsl(0deg 67.71% 56.27%);
+}

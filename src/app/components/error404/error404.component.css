@@ -1,0 +1,8 @@
+.error404 h1{
+    font-size: 110px;
+    margin: 3rem auto;
+}
+.error404 p{
+    margin: 3rem auto;
+    font-size: 16px;
+}

@@ -1,0 +1,29 @@
+<app-header></app-header>
+<section class="signIn">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 right">
+    <img src="assets/images/22.jpg" alt="signIn" class="img-fluid">
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-4 left">
+                <div class="container mt-5">
+                    <h3 class="mt-5">Log in to Exclusive</h3>
+                    <p>Enter your details below</p>
+                    <form  (ngSubmit)="login()">
+                        <input class="form-control mt-3" type="email" [(ngModel)]="email" name="email" placeholder="Email or Phone Number" aria-label="default input example">
+                        <input class="form-control mt-3" type="password"  [(ngModel)]="password" placeholder="Password" name="password" aria-label="default input example">
+                        <div class="d-flex  mt-5 justify-content-between">
+                            <button class="btn btn-primary  mr-5" type="submit">Log In</button>
+                            <a class="btn ">Forget Password?</a>
+                        </div>
+                      
+                       
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</section>
+<app-footer></app-footer>

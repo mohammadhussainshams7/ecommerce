@@ -1,0 +1,95 @@
+<app-header></app-header>
+<main class="container mt-5 cart">
+  <div class="mt-5 mb-5">
+    <a class="text-muted btn" routerLink="/home" routerLinkActive="active">Home</a> / <a class=" btn" routerLink="/cart-shopping" routerLinkActive="active">Cart</a>
+  </div> 
+  <div *ngIf="cartItems.length === 0" class="alert alert-warning">
+    Your cart is empty.
+    
+  </div>
+  <div *ngIf="cartItems.length > 0">
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of cartItems">
+            <td class="top-table-description">
+              <button (click)="removeItemFromCart(item.id)" class="btn " id="delete">
+                  <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="9" fill="#DB4444"/>
+                <path d="M9 15L12 12M15 9L11.9994 12M11.9994 12L9 9M12 12L15 15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+            
+                
+              <img src="{{item.imageSrc}}" width="50" height="39" alt=""> {{ item.name }}</td>
+            <td>{{ item.price }} $  </td>
+            <td><input type="number" class="form-control w-50" min="0"  step="1" (change)="updateQuantity(item.id,item.quantity)" [(ngModel)]="item.quantity"/></td>
+            <td>{{ (item.price * item.quantity) }} $
+            </td>
+           
+          </tr>
+        </tbody>
+      </table>
+     
+    </div>
+    <div class="d-flex justify-content-between">
+      <a class="btn btn-outline-dark" routerLink="/home" routerLinkActive="active">Return To Shop</a>
+      <button class="btn btn-outline-dark">Update Cart</button>
+    </div>
+    <div class="row mt-5">
+      <div class="col-md-4 ">
+        <div class="row">
+          <div class="col-7">        
+            <input type="text" class="form-control" placeholder="Coupon Code">
+          </div>
+          <div class="col">
+            <div class="d-grid">
+              <button class="btn btn-danger">Apply Coupon</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2"></div>
+      <div class="col-md-6">
+        <div class="card">
+          
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><h5>Cart Total</h5></li>
+            <li class="list-group-item">
+              <div class="d-flex justify-content-between">
+                <p>Subtotal</p>
+                <p>{{ cartTotal }} $</p>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="d-flex justify-content-between">
+                <p>Shipping:</p>
+                <p>Free</p>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="d-flex justify-content-between">
+                <p>Total:</p>
+                <p>{{ cartTotal }} $</p>
+              </div>
+            </li>
+            <div class="d-grid mt-1 mb-1 gap-2 col-6 mx-auto">
+              <a class="btn btn-danger" routerLink="/checkout" routerLinkActive="active">Process to checkout</a>
+            </div>
+
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</main>
+<app-footer></app-footer>

@@ -1,0 +1,41 @@
+.top-header{
+    height: 48px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+    background-color: #000000;
+    color: #FAFAFA;
+    align-items: center;
+}
+.top-header h5{
+    font-size: 14px;
+}
+.top-header a{
+    color: #FAFAFA;
+    margin-left: 5px;
+}
+.top-header button{
+    background: rgba(0, 0, 0, 0.1);
+    border: none;
+    font-size: 14px;
+}
+.top-header ul a{
+    color: #000000 !important;
+}
+.top-header ul a:hover{
+    background-color: #000000;
+    color: white !important;
+}
+@media only screen and (max-width: 600px) {
+    .top-header{
+        display: block;
+        height: auto;
+        padding:0;
+        text-align: center;
+    }
+    .top-header h5{
+        display: block;
+        padding: 5px;
+    }
+}

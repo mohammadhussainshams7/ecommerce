@@ -1,0 +1,172 @@
+<app-header></app-header>
+
+<main class="check-out container">
+  <div class="mt-5 mb-5">
+    <a class="text-muted btn">Account</a> /
+    <a class="text-muted btn" routerLink="/account" routerLinkActive="active">My Account</a> /
+    <a class="text-muted btn">Product</a> /
+    <a class="text-muted btn" routerLink="/cart-shopping" routerLinkActive="active">View Cart</a> / 
+    <a class="btn" routerLink="/checkout" >CheckOut</a>
+  </div>
+  <div class="mt-5">
+    <h2>Billing Details</h2>
+    <form [formGroup]="userForm"  (ngSubmit)="saveData()">
+      <div class="row">
+        <section class="col-md-6">
+          <div class="mb-3">
+            <label for="fname" class="form-label">First Name</label>
+            <input 
+              class="form-control" 
+              formControlName="fname" 
+              name="fname" 
+              id="fname"  
+            />
+          
+            <!-- Safe check using *ngIf -->
+            <p class="text text-danger" *ngIf="userForm.controls['fname']?.errors?.['required'] && userForm.controls['fname']?.touched">
+              This is required
+            </p>
+          </div>
+
+            <div class="mb-3">
+              <label for="company-name" class="form-label">Company Name</label>
+              <input class="form-control " id="company-name" name="company-name" formControlName="companyName"  />
+            </div>
+            <div class="mb-3">
+              <label for="street" class="form-label">Street Address</label>
+              <input class="form-control " id="street"  name="street"  formControlName="street" />
+            
+            <!-- Safe check using *ngIf -->
+            <p class="text text-danger" *ngIf="userForm.controls['street']?.errors?.['required'] && userForm.controls['street']?.touched">
+              This is required
+            </p>
+
+            </div>
+            <div class="mb-3">
+              <label for="apartment" class="form-label">Apartment, floor, etc. (optional)</label>
+              <input class="form-control " id="apartment"  formControlName="apartment" name="apartment"  />
+            </div>
+            <div class="mb-3">
+              <label for="city" class="form-label">Town/City</label>
+              <input class="form-control " id="city" name="city" formControlName="city"   />
+                 <!-- Safe check using *ngIf -->
+            <p class="text text-danger" *ngIf="userForm.controls['city']?.errors?.['required'] && userForm.controls['city']?.touched">
+              This is required
+            </p>
+
+
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">Phone Number</label>
+              <input class="form-control " id="phone" name="phone" formControlName="phone"  />
+                               <!-- Safe check using *ngIf -->
+            <p class="text text-danger" *ngIf="userForm.controls['phone']?.errors?.['required'] && userForm.controls['phone']?.touched">
+              This is required
+            </p>
+
+              
+
+            </div>
+            <div class="mb-3">
+              <label for="email " class="form-label">Email Address*</label>
+              <input class="form-control " type="email" id="email " name="email" formControlName="email"   />
+           
+                               <!-- Safe check using *ngIf -->
+            <p class="text text-danger" *ngIf="userForm.controls['email']?.errors?.['required'] && userForm.controls['email']?.touched">
+              This is required
+            </p>
+
+
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" formControlName="saveInformation" name="saveInformation" type="checkbox"  id="saveInformation">
+              <label class="form-check-label" for="saveInformation">
+                  Save this information for faster check-out next time
+              </label>
+            </div>
+        </section>
+        <section class="col-md-6">
+          <div class="card">
+            
+              <ul class="list-group list-group-flush">
+                  @for (product of cartItems; track $index) {
+                  <li class="list-group-item border-bottom-0">
+                  
+                      <div  class="d-flex justify-content-between">
+                          
+                          <p><img loading="lazy" [src]="product.imageSrc" width="50" [alt]="product.name" class="mr-2"> {{product.name}}</p>
+                        <p>{{ product.price * product.quantity }} $</p>
+                      </div>
+                    </li>
+                  }
+                <li class="list-group-item ">
+  
+                  <div class="d-flex justify-content-between">
+                    <p>Subtotal</p>
+                    <p>{{ totalAmount }} $</p>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="d-flex justify-content-between">
+                    <p>Shipping:</p>
+                    <p>Free</p>
+                  </div>
+                </li>
+                <li class="list-group-item border-bottom-0">
+                  <div class="d-flex justify-content-between">
+                    <p>Total:</p>
+                    <p>{{ totalAmount }} $</p>
+                  </div>
+                </li>
+  
+                <li class="list-group-item border-bottom-0">
+                  <div class="row">
+                      <div class="col-md-6">
+                          <div class="form-check ">
+                              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                              <label class="form-check-label" for="flexRadioDefault1">
+                                  Bank
+                              </label>
+                            </div>
+                            <div class="form-check ">
+                              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                              <label class="form-check-label" for="flexRadioDefault2">
+                                  Cash on delivery
+                              </label>
+                            </div>
+                      </div>
+                      <div class="col-md-6">
+                          <img loading="lazy"  [src]="'assets/images/23.png'"  width="37" alt="">
+                          <img  loading="lazy" [src]="'assets/images/24.png'"   width="37" alt="">
+                          <img  loading="lazy" [src]="'assets/images/25.png'"   width="37" alt="">
+                          <img loading="lazy"  [src]="'assets/images/26.png'"   width="37" alt="">
+                      </div>
+                  </div>
+                </li>
+                <li class="list-group-item lastChild border-bottom-0">
+                  <div class="row mt-2">
+                      <div class="col-md-6 ">
+                          <input type="text" class="form-control w-100 " id="coupon" placeholder="Coupon Code">
+                      </div>
+                      <div class="col-md-5 ">
+                          <div class="d-grid gap-2">
+  
+                              <button class="btn btn-danger">Apply Coupon</button>
+                          </div>
+                      </div>
+                    </div>
+                </li>
+  
+                <li class="list-group-item border-bottom-0">
+                  
+                      <button [disabled]="!userForm.valid"  type="submit" class="btn btn-danger" >Place Order</button>
+                </li>
+    
+              </ul>
+            </div>
+        </section>
+      </div>
+    </form>
+  </div>
+</main>
+<app-footer></app-footer>

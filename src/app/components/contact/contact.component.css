@@ -1,0 +1,19 @@
+.contact .phoneIcon {
+    background-color: #DB4444;
+    display: flex;
+    color: wheat;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.contact input,
+.contact textarea
+{
+    background-color: #F5F5F5;
+}

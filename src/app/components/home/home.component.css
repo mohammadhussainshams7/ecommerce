@@ -1,0 +1,229 @@
+deep/ .carousel-indicators button {
+    border-radius:  50% !important;
+    width: 10px !important;
+    height: 10px !important;
+    background-color: hsl(0deg 0% 50.2%);
+    border:1px solid  hsl(0deg 0% 50.2%) !important; 
+
+}
+deep/ .carousel-indicators button.active {
+
+    background-color: hsl(0deg 67.42% 56.67%);
+     border:1px solid #f3f3f3 !important; 
+}
+.carousel-caption {
+    top: 27%;
+    right: 54%;
+    left: 3%;
+}
+deep/ .carousel-control-prev , .carousel-control-next{
+    display: none !important;
+}
+deep/  .carousel-control-next{
+    display: none !important;
+}
+.todays .card,
+.best-selling .card,
+.todays .card{
+    transition: all 1s ;
+    margin: 10px auto !important;
+}
+.todays .card:hover,
+.best-selling .card:hover,
+.todays .card:hover
+{
+    border: 1px solid hsl(0deg 67.71% 56.27%) !important;
+
+}
+.todays .card img,
+.best-selling .card img,
+.todays .card img
+{
+    min-width: 200px;
+    max-width: 200px;
+    max-height: 200px;
+    min-height: 200px;
+}
+.fa-star{
+    color: #FFAD33;
+  
+}
+.header{
+    border-left: 15px solid hsl(0deg 67.71% 56.27%);
+    margin-right: 5px;
+    display: inline-block;
+    height: 25px;
+    border-radius: 1px;
+}
+.down-time{
+    position: relative;
+    padding: 20px;
+   /*  margin-right: 50px; */
+}
+.down-time:first-child{
+    margin-left: 20px;
+}
+.top-time{
+    position: absolute;
+    bottom: 60px;
+    left: 15px;
+    font-size: medium !important;
+}
+.dot{
+    color: hsl(0deg 67.71% 56.27%);
+    
+}
+.top-card{
+    background-color: #F5F5F5;
+}
+.start i{
+    color: #FFAD33;
+}
+.discount-percent{
+    background:hsl(0deg 67.71% 56.27%); 
+    padding: 5px;
+    border-radius: 5px;
+    color: #f3f3f3;
+}
+.fill-Heart i:hover{
+    color: hsl(0deg 67.71% 56.27%); 
+    transition: all 1s;
+}
+.eye i:hover{
+color: hsl(0deg 67.71% 56.27%); 
+transition: all 1s;
+}
+.top-card img:hover{
+    transform: scaleX(180deg);
+}
+@media only screen and (max-width :993px) {
+    .custom-md{
+       display: flex;
+       justify-content: space-around;
+    }
+
+}
+.bg-custom{
+    background-color:hsl(0deg 67.71% 56.27%); 
+    border: 0;
+    margin-top: 5px auto;
+    padding: 15px;
+    border-radius: 4px;
+    color: #f3f3f3;
+    transition:  1s;
+
+}
+
+.bg-custom:hover{
+    background-color: #640d0d;
+}
+
+.categories .card {
+    padding: 10px;
+    border-radius: 4px;
+    margin: 10px;
+    transition: all 1s;
+    display: flex !important;
+    align-items: center;
+    justify-content: center !important;
+    cursor: pointer;
+}
+.categories .card:hover{
+    background-color:#DB4444;
+    color: #FAFAFA;
+
+}
+
+.music-experience .times{
+    display: flex;
+    justify-content: space-evenly;
+}
+.music-experience .perenttime{
+    background-color: #FFFFFF;
+    text-align: center;
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    margin: 5px auto;
+    border-radius: 50%;
+
+}
+.music-experience .top-times{
+    font-size: 16px;
+    font-family: Poppins;
+    font-weight: 600;   
+}
+.music-experience .down-times{
+    font-size: 16px;
+    font-family: Poppins;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.music-experience .title-categories{
+    color: #00FF66;
+}
+.music-experience h2{
+    color: #FAFAFA;
+}
+.music-experience .btn-success{
+    background-color: #00FF66;
+    margin: 20px;
+}
+/* .music-experience .image-size{
+    max-width: 568px;
+    max-height: 330px;
+    padding: 5px;
+    margin-bottom: 20px;
+} */
+/* .music-experience .img-fluid{
+    max-width: 83%;
+} */
+
+.featured .parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1px;
+    color: #f3f3f3;
+}
+.featured .parent button{
+    color: #f3f3f3;
+  
+}
+/* .featured .parent .speaker{
+    border: 10px solid #F5F5F5;
+} */
+.featured .div1 {
+    grid-row: span 2 / span 2;
+}
+.featured .parent {
+    transition: all 1s;
+}
+.featured img{
+    height: 75%;
+}
+.featured .div3{
+    display: flex;
+    gap: 1px;
+}
+/* .featured .div2 {
+    grid-column-start: 2;
+    margin: 5px;
+} */
+
+/* .featured .div3 {
+    grid-column-start: 2;
+    margin: 15px;
+} */
+
+/* .featured  img{
+    margin-bottom: 10px;
+
+}
+ */
+/* .text-bottom{
+    margin: 5px auto;
+} */

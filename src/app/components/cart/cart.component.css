@@ -1,0 +1,14 @@
+.cart .top-table-description{
+    position: relative;
+
+}
+.cart #delete{
+    position: absolute;
+    top: -7px;
+    left: -8px;
+    display: none;
+}
+
+.cart .top-table-description:hover #delete{
+    display: block;
+}

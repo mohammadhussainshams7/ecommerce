@@ -1,0 +1,10 @@
+/* .nav-link:hover{
+    border-bottom: 1px solid hsl(0deg 0% 76.86%);
+} */
+.nav-link:hover{
+    border-bottom: 1px solid hsl(0deg 0% 76.86%);
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.navbar .btn .badge{
+    top: 10px;
+}
