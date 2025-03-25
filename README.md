@@ -1,4 +1,4 @@
-# eCommerce Angular Application
+# ECommerce Angular Application
 
 This is an eCommerce web application built with Angular. It provides features for browsing products, managing user accounts, and handling orders.
 
