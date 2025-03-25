@@ -25,15 +25,16 @@ Before you begin, ensure you have the following installed:
 1. Clone the repository:
    ```bash
    git clone https://github.com/mohammadhussainshams7/ecommerce.git
+2. Navigate to the project directory:
     ```bash
     cd ecommerce
-   
+3. Install dependencies:
     ```bash
     npm install
-   
+4. Install dependencies:
     ```bash
     ng serve
-   
+5. Start json-server:
    ```bash
    json-server --watch db.json
 
